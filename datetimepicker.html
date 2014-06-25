@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<link rel="stylesheet" type="text/css" href="./jquery.datetimepicker.css"/>
+</head>
+<body>
+  <h3>DateTimePicker</h3>
+  <div class="time-picker">
+    <span>日期</span>
+    <input type="text" id="date-time-picker" style="width:160px"/>
+    <img src="./calendar.png" id="calendar-pic"/>
+  </div>
+  <div class="time-picker">
+    <span>日期</span>
+    <input type="text" id="date-time-picker2" style="width:160px"/>
+    <img src="./calendar.png" id="calendar-pic2"/>
+  </div>
+</body>
+<script type="text/javascript" src="./jquery.js"></script>
+<script type="text/javascript" src="./jquery.datetimepicker.js"></script>
+<script type="text/javascript">
+
+  $('#date-time-picker').datetimepicker({
+    lang: 'ch',
+    todayButton: false,
+    // onlyDate: true, //only show datepicker
+    // minDate:0,
+  });
+
+  $('#date-time-picker').prop('disabled', true);
+
+  $('#calendar-pic').click(function(){
+    $('#date-time-picker').datetimepicker('show');
+  });
+
+///////
+  $('#date-time-picker2').datetimepicker({
+    lang: 'ch',
+    todayButton: false,
+    // onlyDate: true, //only show datepicker
+    minDate:0,
+  });
+
+  $('#date-time-picker2').prop('disabled', true);
+
+  $('#calendar-pic2').click(function(){
+    $('#date-time-picker2').datetimepicker('show');
+  });
+</script>
+</html>
