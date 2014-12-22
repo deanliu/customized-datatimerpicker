@@ -749,7 +749,6 @@
 					};
 
 					_this.setCurrentTime = function( dTime) {
-						debugger;
 						_this.currentTime = (typeof dTime == 'string')? _this.strToDateTime(dTime) : _this.isValidDate(dTime) ? dTime: _this.now();
 						datetimepicker.trigger('xchange.xdsoft');
 					};
